@@ -14,6 +14,7 @@ module.exports = {
       options: {
         baseUrl: process.env.WORDPRESS_URL, // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
+        apiBase: 'wp-json'
       }
     }
   ]
