@@ -1,20 +1,24 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">Gridsome</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+  <!-- <div class="layout"> -->
+    <main class="l-main">
+      <slot/>
+    </main>
+  <!-- </div> -->
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    link: [
+      { rel: 'stylesheet', href: '/css/ress.css' },
+      { rel: 'stylesheet', href: '/css/common.css' }
+    ]
+  }
+}
+</script>
+
 <style>
-body {
+/* body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
@@ -50,5 +54,5 @@ nav[role="navigation"] a {
 }
 .post-list li {
   padding: 1em 0;
-}
+} */
 </style>

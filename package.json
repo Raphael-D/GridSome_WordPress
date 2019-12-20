@@ -2,12 +2,24 @@
   "name": "wordpress",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "dev": "gridsome develop",
-    "explore": "gridsome explore"
+    "build:gridsome": "gridsome build",
+    "develop:gridsome": "gridsome develop",
+    "explore:gridsome": "gridsome explore",
+    "build:sass": "webpack",
+    "watch:sass": "webpack --watch",
+    "dev": "run-p watch:sass develop:gridsome",
+    "build": "run-s build:sass build:gridsome"
   },
   "dependencies": {
     "@gridsome/source-wordpress": "^0.4.0",
     "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "mini-css-extract-plugin": "^0.8.2",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "webpack-fix-style-only-entries": "^0.4.0"
   }
 }

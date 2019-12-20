@@ -1,0 +1,54 @@
+/*==========================
+* Target: Global, index.vue
+* Rule: MindBEMding
+* Author: Rapahel-D
+* Type: SSG
+* Description: Fack me!(female only)
+==========================*/
+/*==========================
+Base & Utility
+==========================*/
+* {
+  box-sizing: border-box; }
+
+/*==========================
+Layout
+==========================*/
+.l-header,
+.l-footer {
+  padding: 15px; }
+  @media screen and (min-width: 768px) {
+    .l-header,
+    .l-footer {
+      display: flex;
+      justify-content: space-between; } }
+
+.l-main {
+  padding-top: 48px;
+  padding-bottom: 48px; }
+
+.l-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: calc(960px - 15px * 2);
+  margin-right: auto;
+  margin-left: auto; }
+
+/*==========================
+Component
+==========================*/
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex; } }
+
+.nav__link {
+  padding-right: 1em;
+  padding-left: 1em;
+  display: block;
+  margin-right: 1em;
+  margin-left: 1em; }
+
+/*==========================
+Modules
+==========================*/
+

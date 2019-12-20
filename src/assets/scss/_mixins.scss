@@ -1,0 +1,93 @@
+// Global values
+$gnum: 15px;
+// Media query value
+$mq-breakPoints: (
+	'tablet': 768px,
+	'pc': 1025px,
+);
+// Media query mixin
+@mixin mq($breakPoint: tablet) {
+	@media screen and (min-width: #{map-get($mq-breakPoints, $breakPoint)}) {
+		@content;
+	}
+}
+// Media query mixin for Smart Phone Land Scape Only
+@mixin spLandScapeOnly() {
+  @media only screen and (orientation:landscape) and (max-width: 812px) {
+    @content;
+  }
+}
+// Margin auto mixin
+@mixin mAuto($right: auto, $left: auto) {
+	margin-right: $right;
+	margin-left: $left;
+}
+// Centering for vertical and holizontal mixin
+@mixin centeRingXY($state: absolute) {
+	position: $state;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+// Centering for holizontal mixin
+@mixin centeRingX($state: absolute, $topValue: 0) {
+	position: $state;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: $topValue;
+	left: 50%;
+}
+// Centering for vertical mixin
+@mixin centerRingY($state: absolute, $leftValue: 0) {
+	position: $state;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	top: 50%;
+	left: $leftValue;
+}
+// Absolute position mixin (you can select which absolute)
+@mixin ptlz($state: absolute, $y: 0, $x: 0, $z: 0) {
+	position: $state;
+	top: $y;
+	left: $x;
+	z-index: $z;
+}
+// Timing function adjust mixin
+@mixin timingFunc($time: 0.4s) {
+	-webkit-transition: $time ease-in-out;
+	transition: $time ease-in-out;
+}
+// Color config value
+$Colors: (
+  'base': #0d2538,
+	'accent1': #00a672,
+	'accent2': #008350,
+	'background': transparent,
+	'content': #333
+);
+// Set font color  mixin
+@mixin fontColor($value: base) {
+	color: #{map-get($Colors, $value)};
+}
+// Set background color mixin
+@mixin bgColor($value: base) {
+	background-color: #{map-get($Colors, $value)};
+}
+// Set border color mixin
+@mixin borderColor($value: base) {
+	border-color: #{map-get($Colors, $value)};
+}
+// Get color value function
+@function getColor($value: base) {
+  @return #{map-get($Colors, $value)};
+}
+
+// Set Border Assy
+@mixin setBorder($weight: 1px, $style: solid, $color: base, $direction: null) {
+	@if $direction == null {
+		border: $weight $style #{map-get($Colors, $color)};
+	} @else {
+		border-#{$direction}: $weight $style #{map-get($Colors, $color)};
+	}
+}

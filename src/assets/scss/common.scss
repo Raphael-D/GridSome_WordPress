@@ -1,0 +1,54 @@
+@import 'mixins';
+/*==========================
+* Target: Global, index.vue
+* Rule: MindBEMding
+* Author: Rapahel-D
+* Type: SSG
+* Description: Fack me!(female only)
+==========================*/
+/*==========================
+Base & Utility
+==========================*/
+* {
+  box-sizing: border-box;
+}
+/*==========================
+Layout
+==========================*/
+.l-header,
+.l-footer {
+  padding: $gnum;
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.l-main {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.l-wrapper {
+  padding-right: $gnum;
+  padding-left: $gnum;
+  max-width: calc(960px - #{$gnum} * 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+/*==========================
+Component
+==========================*/
+.nav {
+  @include mq() {
+    display: flex;
+  }
+}
+.nav__link {
+  padding-right: 1em;
+  padding-left: 1em;
+  display: block;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+/*==========================
+Modules
+==========================*/
