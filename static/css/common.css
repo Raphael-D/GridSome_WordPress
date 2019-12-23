@@ -14,25 +14,54 @@ Base & Utility
 /*==========================
 Layout
 ==========================*/
+@media screen and (min-width: 768px) {
+  .l-container {
+    display: flex;
+    flex-wrap: wrap;
+    justfy-content: space-between; } }
+
 .l-header,
 .l-footer {
+  width: 100%;
   padding: 15px; }
   @media screen and (min-width: 768px) {
     .l-header,
     .l-footer {
       display: flex;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      align-items: center; } }
+
+.l-header {
+  background-color: #99f; }
+
+.l-footer {
+  background-color: #ff9; }
 
 .l-main {
   padding-top: 48px;
-  padding-bottom: 48px; }
+  padding-bottom: 48px;
+  background-color: #f99;
+  width: 100%; }
+
+@media screen and (min-width: 768px) {
+  .l-main:nth-last-child(3) {
+    width: calc(100% - 300px); } }
 
 .l-wrapper {
   padding-right: 15px;
   padding-left: 15px;
   max-width: calc(960px - 15px * 2);
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  border: 1px solid #fff; }
+
+.l-side {
+  background-color: #9f9;
+  padding: 15px; }
+  @media screen and (min-width: 768px) {
+    .l-side {
+      width: 100%;
+      max-width: 300px; } }
 
 /*==========================
 Component

@@ -15,17 +15,45 @@ Base & Utility
 /*==========================
 Layout
 ==========================*/
+.l-container {
+  @include mq() {
+    display: flex;
+    flex-wrap: wrap;
+    justfy-content: space-between;
+  }
+
+  
+}
 .l-header,
 .l-footer {
+  width: 100%;
   padding: $gnum;
   @include mq() {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
+}
+.l-header {
+  background-color: #99f;
+  
+}
+.l-footer {
+  background-color: #ff9;
+  
 }
 .l-main {
   padding-top: 48px;
   padding-bottom: 48px;
+  background-color: #f99;
+  width: 100%;
+}
+.l-main:nth-last-child(3) {
+  // l-main's container will to small width for if exist sidebar
+  @include mq() {
+    width: calc(100% - 300px)
+  }
+  
 }
 .l-wrapper {
   padding-right: $gnum;
@@ -33,7 +61,17 @@ Layout
   max-width: calc(960px - #{$gnum} * 2);
   margin-right: auto;
   margin-left: auto;
+  border: 1px solid #fff;
 }
+.l-side {
+  background-color: #9f9;
+  padding: $gnum;
+  @include mq() {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 /*==========================
 Component
 ==========================*/

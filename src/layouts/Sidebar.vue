@@ -1,5 +1,5 @@
 <template>
-    <aside>
+    <aside class="l-side">
         <div>
             <ul>
                 <li>
