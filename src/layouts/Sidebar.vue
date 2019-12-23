@@ -1,0 +1,41 @@
+<template>
+    <aside>
+        <div>
+            <ul>
+                <li>
+                    <g-link>list01</g-link>
+                </li>
+                <li>
+                    <g-link>list02</g-link>
+                </li>
+                <li>
+                    <g-link>list03</g-link>
+                </li>
+                <li>
+                    <g-link>list4</g-link>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <g-link>list01</g-link>
+                </li>
+                <li>
+                    <g-link>list02</g-link>
+                </li>
+                <li>
+                    <g-link>list03</g-link>
+                </li>
+                <li>
+                    <g-link>list4</g-link>
+                </li>
+            </ul>
+        </div>
+    </aside>
+</template>
+<script>
+export default {
+    name: 'Sidebar'
+}
+</script>
