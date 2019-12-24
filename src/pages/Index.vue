@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <section class="l-section">
     <div class="l-wrapper">
       <h1 class="heading">お知らせ一覧</h1>
       <ul class="post-list">
@@ -9,15 +10,20 @@
       </ul>
       <Pager :info="$page.allWordPressPost.pageInfo"/>
     </div>
+    </section>
+    <section v-html="$page.wordPressPage.content"></section>
   </Layout>
 </template>
 
 <page-query>
 query Home ($page: Int) {
+  wordPressPage(id: 5) {
+    content
+  }
   allWordPressPost (page: $page, perPage: 10, filter: {
     categories: {
       id: {
-        eq: 3
+        eq: 1
       }
     }
   }) @paginate {

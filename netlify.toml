@@ -3,4 +3,4 @@
   command = "npm run build"
   
 [template.environment]
-  WORDPRESS_URL = "http://xndt1.xsrv.jp/john01/"
+  WORDPRESS_URL = "http://xndt1.xsrv.jp/john02/"
