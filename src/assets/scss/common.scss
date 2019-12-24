@@ -12,6 +12,12 @@ Base & Utility
 * {
   box-sizing: border-box;
 }
+body {
+  line-height: 1.6;
+}
+.heading {
+  margin-bottom: $gnum;
+}
 /*==========================
 Layout
 ==========================*/
@@ -45,7 +51,7 @@ Layout
 .l-main {
   padding-top: 48px;
   padding-bottom: 48px;
-  background-color: #f99;
+  // background-color: #9ff;
   width: 100%;
 }
 .l-main:nth-last-child(3) {
@@ -61,7 +67,12 @@ Layout
   max-width: calc(960px - #{$gnum} * 2);
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid #fff;
+  border: 1px solid #ccc;
+}
+.l-main:nth-last-child(3) .l-wrapper {
+  @include mq() {
+    margin-right: $gnum;
+  }
 }
 .l-side {
   background-color: #9f9;
@@ -69,12 +80,19 @@ Layout
   @include mq() {
     width: 100%;
     max-width: 300px;
+    margin-right: auto;
   }
 }
 
 /*==========================
 Component
 ==========================*/
+.header__logo {
+  font-size: 1.4rem;
+  @include mq() {
+    font-size: 1.6rem;
+  }
+}
 .nav {
   @include mq() {
     display: flex;
@@ -90,3 +108,7 @@ Component
 /*==========================
 Modules
 ==========================*/
+.post-list li {
+  margin-bottom: calc(#{$gnum} * 2);
+}
+

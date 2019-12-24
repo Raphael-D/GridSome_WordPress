@@ -11,6 +11,12 @@ Base & Utility
 * {
   box-sizing: border-box; }
 
+body {
+  line-height: 1.6; }
+
+.heading {
+  margin-bottom: 15px; }
+
 /*==========================
 Layout
 ==========================*/
@@ -40,7 +46,6 @@ Layout
 .l-main {
   padding-top: 48px;
   padding-bottom: 48px;
-  background-color: #f99;
   width: 100%; }
 
 @media screen and (min-width: 768px) {
@@ -53,7 +58,11 @@ Layout
   max-width: calc(960px - 15px * 2);
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid #fff; }
+  border: 1px solid #ccc; }
+
+@media screen and (min-width: 768px) {
+  .l-main:nth-last-child(3) .l-wrapper {
+    margin-right: 15px; } }
 
 .l-side {
   background-color: #9f9;
@@ -61,11 +70,18 @@ Layout
   @media screen and (min-width: 768px) {
     .l-side {
       width: 100%;
-      max-width: 300px; } }
+      max-width: 300px;
+      margin-right: auto; } }
 
 /*==========================
 Component
 ==========================*/
+.header__logo {
+  font-size: 1.4rem; }
+  @media screen and (min-width: 768px) {
+    .header__logo {
+      font-size: 1.6rem; } }
+
 @media screen and (min-width: 768px) {
   .nav {
     display: flex; } }
@@ -80,4 +96,6 @@ Component
 /*==========================
 Modules
 ==========================*/
+.post-list li {
+  margin-bottom: calc(15px * 2); }
 

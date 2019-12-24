@@ -1,4 +1,26 @@
 /*===================
 *
 ===================*/
+/*===================
+* Utility
+===================*/
+.page-heading {
+  background-color: #eee;
+  border-left: 0.2em solid #00a672;
+  padding-left: .4em;
+  margin-bottom: 15px; }
+
+/*===================
+* Components
+===================*/
+@media screen and (min-width: 768px) {
+  .wp-block-columns {
+    display: flex;
+    margin-right: calc(15px / -2);
+    margin-left: calc(15px / -2); } }
+
+@media screen and (min-width: 768px) {
+  .wp-block-column {
+    width: 100%;
+    margin: calc(15px / 2); } }
 

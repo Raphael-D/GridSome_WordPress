@@ -1,6 +1,7 @@
 <template>
   <Layout>
-    <h1 v-html="$page.wordPressPost.title"/>
+    <div class="l-wrapper">
+    <h1 class="page-heading" v-html="$page.wordPressPost.title"/>
     <img
       v-if="$page.wordPressPost.featuredMedia"
       :src="$page.wordPressPost.featuredMedia.sourceUrl"
@@ -24,6 +25,7 @@
         </li>
       </ul>
     </template>
+    </div>
   </Layout>
 </template>
 
@@ -57,7 +59,10 @@ query WordPressPost ($id: ID!) {
 export default {
   metaInfo () {
     return {
-      title: this.$page.wordPressPost.title
+      title: this.$page.wordPressPost.title,
+      link: [
+        { rel: 'stylesheet', href: '/css/style.css' }
+      ]
     }
   }
 }

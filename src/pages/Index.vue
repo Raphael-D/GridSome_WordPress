@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="l-wrapper">
-      <h1>お知らせ一覧</h1>
+      <h1 class="heading">お知らせ一覧</h1>
       <ul class="post-list">
         <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id">
           <Post :post="node" />

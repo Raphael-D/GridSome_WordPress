@@ -2,3 +2,30 @@
 /*===================
 *
 ===================*/
+/*===================
+* Utility
+===================*/
+.page-heading {
+    background-color: #eee;
+    border-left: .2em solid getColor(accent1);
+    padding-left: .4em;
+    margin-bottom: $gnum;
+}
+/*===================
+* Components
+===================*/
+//For Gutenberg Block editor stylus
+.wp-block-columns {
+    @include mq() {
+      display: flex;
+      margin-right: calc(#{$gnum} / -2);
+      margin-left: calc(#{$gnum} / -2);
+    }
+  }
+  .wp-block-column {
+    @include mq() {
+        //   border: 1px dotted #ccc;
+      width: 100%;
+      margin: calc(#{$gnum} / 2);
+    }
+  }

@@ -1,6 +1,6 @@
 <template>
     <header class="l-header header">
-        <h1>
+        <h1 class="header__logo">
             <g-link to="/">Gridsome WordPress JAMStack</g-link>
         </h1>
         <nav class="nav">
