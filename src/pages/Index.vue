@@ -11,19 +11,16 @@
       <Pager :info="$page.allWordPressPost.pageInfo"/>
     </div>
     </section>
-    <section v-html="$page.wordPressPage.content"></section>
   </Layout>
 </template>
 
 <page-query>
 query Home ($page: Int) {
-  wordPressPage(id: 5) {
-    content
-  }
+  
   allWordPressPost (page: $page, perPage: 10, filter: {
     categories: {
       id: {
-        eq: 1
+        eq: 3
       }
     }
   }) @paginate {
