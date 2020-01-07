@@ -1,7 +1,7 @@
 <template>
     <div class="l-container">
         <Header></Header>
-        <router-view />
+        <router-view :class="{'is-sidebar': sidebar}" />
         <Sidebar v-if="sidebar"></Sidebar>
         <Footer></Footer>
     </div>

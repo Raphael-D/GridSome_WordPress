@@ -27,8 +27,6 @@ Layout
     flex-wrap: wrap;
     justfy-content: space-between;
   }
-
-  
 }
 .l-header,
 .l-footer {
@@ -53,6 +51,11 @@ Layout
   padding-bottom: 48px;
   // background-color: #9ff;
   width: 100%;
+  &.is-sidebar {
+    max-width: 820px;
+    padding-left: $gnum;
+    margin-left: auto;
+  }
 }
 .l-main:nth-last-child(3) {
   // l-main's container will to small width for if exist sidebar
@@ -72,6 +75,8 @@ Layout
 .l-main:nth-last-child(3) .l-wrapper {
   @include mq() {
     margin-right: $gnum;
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 .l-side {
@@ -79,7 +84,7 @@ Layout
   padding: $gnum;
   @include mq() {
     width: 100%;
-    max-width: 300px;
+    max-width: 240px;
     margin-right: auto;
   }
 }
